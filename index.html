@@ -1,15 +1,57 @@
+<!DOCTYPE html>
 <html>
-    <head>
-        <link rel="stylesheet" href="index.css">
-    </head>
-    <body>
-        <h1>Blackjack</h1>
-        <p id="message-el">Want to play a round?</p>
+<head>
+    <title>Blackjack Casino</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+<div class="game-container">
+
+    <h1>Blackjack Casino</h1>
+
+    <p id="message-el">Place your bet and start!</p>
+
+    <div class="section">
+        <h2>Dealer</h2>
+        <p id="dealer-cards-el">Cards:</p>
+        <p id="dealer-sum-el">Sum:</p>
+    </div>
+
+    <div class="section">
+        <h2>Player</h2>
         <p id="cards-el">Cards:</p>
         <p id="sum-el">Sum:</p>
-        <button onclick="startGame()">START GAME</button>
-        <button onclick="newCard()">NEW CARD</button>
-        <p id="player-el"></p>
-        <script src="index.js"></script>
-    </body>
+    </div>
+
+    <!-- <input type="number" id="bet-el" placeholder="Enter Bet" /> -->
+
+    <div class="buttons">
+        <input type="text" id="name-input" placeholder="Enter your name">
+        <button id="save-name-btn" onclick="savePlayerName()">Save Name</button>
+        <br>
+        <input type="number" id="bet-el" placeholder="Enter Bet" />
+        <button id="start-btn" onclick="startGame()">START</button>
+        <button id="hit-btn" onclick="newCard()">HIT</button>
+        <button id="stand-btn" onclick="stand()">STAND</button>
+        <button id="reset-btn" onclick="resetGame()">RESET</button>
+        <button id="double-btn" onclick="doubleDown()">DOUBLE</button>
+        <button id="split-btn" onclick="splitHand()">SPLIT</button>
+
+
+    </div>
+
+
+    <p id="player-el"></p>
+
+</div>
+<audio id="hit-sound" src="sounds/hit.mp3"></audio>
+<audio id="win-sound" src="sounds/win.mp3"></audio>
+<audio id="lose-sound" src="sounds/lose.mp3"></audio>
+<audio id="draw-sound" src="sounds/draw.mp3"></audio>
+<audio id="reset-sound" src="sounds/reset.mp3"></audio>
+
+<script src="index.js"></script>
+
+</body>
 </html>
