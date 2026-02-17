@@ -1,193 +1,93 @@
-🎰 Blackjack Casino
+# 🎰 Blackjack Casino
 
-A fully interactive, animated Blackjack web game built using HTML, CSS, and JavaScript.
+A fully interactive, animated Blackjack web game built using **HTML, CSS, and JavaScript**.
 
-This project simulates a real casino-style Blackjack experience with betting, animations, sound effects, split & double down features, and responsive design.
+Experience a real casino-style Blackjack table with betting, animations, sound effects, and responsive design.
 
-🚀 Live Features
+---
 
-🎴 Real 52-card deck
+## ✨ Features
 
-💰 Betting system
+- 🎴 Real 52-card deck
+- 💰 Betting system
+- 🪙 Chip balance tracking (LocalStorage)
+- 🃏 Smart Ace logic (11 → 1 auto adjustment)
+- 🎭 Dealer AI (draws until 17+)
+- 🔥 Split (if first two cards match)
+- ⚡ Double Down
+- 🎬 Card flip animation
+- ⏳ Delayed dealer reveal
+- 🔊 Sound effects
+- 📱 Fully responsive layout
 
-🪙 Chip balance tracking (saved with LocalStorage)
+---
 
-🃏 Real Ace logic (11 → 1 adjustment automatically)
+## 🖥️ Layout
 
-🎭 Dealer logic (draws until 17+)
+3-Column Casino Interface:
 
-🔥 Split option (if first two cards match)
+- **Left Panel** → Title & Player Info  
+- **Center Panel** → Dealer & Player Cards  
+- **Right Panel** → Betting & Controls  
 
-⚡ Double Down feature
+---
 
-🎬 Card flip animation
+## 🎮 Game Rules
 
-⏳ 1-second dealer reveal delay
+1. Place your bet.
+2. Dealer receives two cards (one hidden).
+3. Choose:
+   - HIT
+   - STAND
+   - DOUBLE
+   - SPLIT (if available)
+4. Dealer draws until total ≥ 17.
+5. Winner determined by Blackjack rules.
 
-🔊 Sound effects (hit, win, lose, draw, reset)
+---
 
-📱 Fully responsive (desktop + mobile)
+## 💰 Payout System
 
-🎨 Premium casino UI (3-column layout)
+| Result | Outcome |
+|--------|---------|
+| Win    | 2 × Bet |
+| Draw   | Bet returned |
+| Loss   | Bet lost |
 
-🖥️ Layout Structure
-3-Column Professional Casino Layout
-| LEFT PANEL  |  CENTER TABLE  | RIGHT CONTROLS |
-|-------------|----------------|----------------|
-| Title       | Dealer Cards   | Name Input     |
-| Balance     | Player Cards   | Bet Input      |
-| Game Status | Card Sums      | Action Buttons |
+---
 
-🎮 Game Rules
+## 🛠 Tech Stack
 
-Player places a bet
+- HTML5  
+- CSS3 (Flexbox + Grid + Animations)  
+- Vanilla JavaScript (ES6)  
+- LocalStorage API  
 
-Dealer receives 2 cards (1 hidden)
+---
 
-Player can:
+## 📂 Project Structure
 
-HIT
-
-STAND
-
-DOUBLE
-
-SPLIT (if possible)
-
-Dealer draws until total ≥ 17
-
-Winner determined based on Blackjack rules
-
-💰 Payout System
-Result	Payout
-Win	2 × Bet (1:1 payout)
-Draw (Push)	Bet returned
-Loss	Bet lost
-🃏 Ace Logic
-
-Ace initially counts as 11
-
-If total exceeds 21, Ace automatically converts to 1
-
-💾 Player Progress
-
-Player name saved for session
-
-Chip balance stored using:
-
-localStorage
-
-
-Progress remains after refresh
-
-🛠️ Tech Stack
-
-HTML5
-
-CSS3 (Grid + Flexbox + Animations)
-
-Vanilla JavaScript (ES6)
-
-LocalStorage API
-
-📂 Project Structure
 blackjack-casino/
 │
 ├── index.html
 ├── index.css
 ├── index.js
-│
 ├── cards/
-│   ├── 52 card images
-│   └── back.png
-│
 └── sounds/
-    ├── hit.mp3
-    ├── win.mp3
-    ├── lose.mp3
-    ├── draw.mp3
-    └── reset.mp3
 
-🎨 UI Highlights
+---
 
-Dark green casino theme
+## 🚀 Future Improvements
 
-Gold glowing typography
+- 3:2 Blackjack payout
+- Insurance system
+- Multiplayer mode
+- Statistics tracking
+- Backend authentication
 
-Radial gradient background
+---
 
-Smooth hover effects
+## 👨‍💻 Author
 
-Animated card flip transitions
-
-Delayed dealer reveal (realistic feel)
-
-📱 Responsive Design
-
-Desktop → 3-column layout
-
-Tablet → Adjusted spacing
-
-Mobile → Vertical stacked layout
-
-No unwanted scrolling
-
-🧠 Advanced Features Implemented
-
-Dynamic deck generation
-
-Card shuffling
-
-Delayed recursive dealer draw
-
-Split hand logic
-
-Double down bet handling
-
-Sound control & stopAllSounds system
-
-Smooth DOM re-rendering
-
-🔥 Future Improvements (Optional Enhancements)
-
-3:2 Blackjack payout
-
-Insurance feature
-
-Multiplayer mode
-
-Statistics tracker
-
-Animations for chips
-
-Casino ambient background music
-
-Backend authentication system
-
-🎯 Learning Outcomes
-
-This project demonstrates:
-
-DOM manipulation mastery
-
-State management without frameworks
-
-Game logic implementation
-
-Responsive layout engineering
-
-Animation integration
-
-LocalStorage usage
-
-Clean UI structuring
-
-📸 Preview
-
-(Add screenshots here if uploading to GitHub)
-
-👨‍💻 Author
-
-Dheeraj Singh Chauhan
-B.Tech CSE
+**Dheeraj Singh Chauhan**  
 Frontend Developer
