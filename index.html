@@ -7,42 +7,51 @@
 <body>
 
 <div class="game-container">
+        <div class="casino-layout">
 
-    <h1>Blackjack Casino</h1>
+        <!-- LEFT COLUMN -->
+        <div class="left-column">
+            <h1>Blackjack Casino</h1>
+            <p id="player-el"></p>
+            <p id="message-el">Place your bet and start!</p>
+        </div>
 
-    <p id="message-el">Place your bet and start!</p>
+        <!-- CENTER COLUMN -->
+        <div class="center-column">
 
-    <div class="section">
-        <h2>Dealer</h2>
-        <p id="dealer-cards-el">Cards:</p>
-        <p id="dealer-sum-el">Sum:</p>
+            <div class="section">
+                <h2>Dealer</h2>
+                <div id="dealer-cards-el" class="cards-row"></div>
+                <p id="dealer-sum-el">Sum: ?</p>
+            </div>
+
+            <div class="section">
+                <h2>Player</h2>
+                <div id="cards-el" class="cards-row"></div>
+                <p id="sum-el">Sum: 0</p>
+            </div>
+
+        </div>
+
+        <!-- RIGHT COLUMN -->
+        <div class="right-column">
+
+            <input type="text" id="name-input" placeholder="Enter your name">
+            <button id="save-name-btn" onclick="savePlayerName()">Save Name</button>
+
+            <input type="number" id="bet-el" placeholder="Enter Bet" />
+
+            <button id="start-btn" onclick="startGame()">START</button>
+            <button id="hit-btn" onclick="newCard()">HIT</button>
+            <button id="stand-btn" onclick="stand()">STAND</button>
+            <button id="double-btn" onclick="doubleDown()">DOUBLE</button>
+            <button id="split-btn" onclick="splitHand()">SPLIT</button>
+            <button id="reset-btn" onclick="resetGame()">RESET</button>
+
+        </div>
+
     </div>
 
-    <div class="section">
-        <h2>Player</h2>
-        <p id="cards-el">Cards:</p>
-        <p id="sum-el">Sum:</p>
-    </div>
-
-    <!-- <input type="number" id="bet-el" placeholder="Enter Bet" /> -->
-
-    <div class="buttons">
-        <input type="text" id="name-input" placeholder="Enter your name">
-        <button id="save-name-btn" onclick="savePlayerName()">Save Name</button>
-        <br>
-        <input type="number" id="bet-el" placeholder="Enter Bet" />
-        <button id="start-btn" onclick="startGame()">START</button>
-        <button id="hit-btn" onclick="newCard()">HIT</button>
-        <button id="stand-btn" onclick="stand()">STAND</button>
-        <button id="reset-btn" onclick="resetGame()">RESET</button>
-        <button id="double-btn" onclick="doubleDown()">DOUBLE</button>
-        <button id="split-btn" onclick="splitHand()">SPLIT</button>
-
-
-    </div>
-
-
-    <p id="player-el"></p>
 
 </div>
 <audio id="hit-sound" src="sounds/hit.mp3"></audio>

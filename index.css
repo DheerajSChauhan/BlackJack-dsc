@@ -10,6 +10,7 @@
 html, body {
     height: 100%;
     margin: 0;
+    overflow: hidden;
 }
 
 body {
@@ -24,12 +25,50 @@ body {
 .game-container {
     height: 100vh;
     width: 100%;
+    padding: 0;
+    
+}
+
+/* ===== 3 COLUMN LAYOUT ===== */
+
+.casino-layout {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    height: 100vh;
+}
+
+/* LEFT COLUMN */
+.left-column {
+    padding: 40px;
     display: flex;
     flex-direction: column;
+    justify-content: center;
+}
+
+/* CENTER COLUMN */
+.center-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
-    justify-content: flex-start; /* instead of center */
-    padding-top: 80px;
-    
+    background: radial-gradient(circle at center, #063d2a, #021a12);
+    border-left: 2px solid rgba(255,215,0,0.2);
+    border-right: 2px solid rgba(255,215,0,0.2);
+}
+
+/* RIGHT COLUMN */
+.right-column {
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+}
+
+.right-column input,
+.right-column button {
+    width: 180px;
 }
 
 
@@ -52,7 +91,8 @@ h1 {
     border-radius: 15px;
     /* margin: 20px auto; */
     margin: 20px 0; 
-    width: 80%;
+    width: 100%;
+    max-width: 500px;
     box-shadow: 0 0 20px rgba(0,0,0,0.5);
 }
 
@@ -201,4 +241,33 @@ button:hover {
 
 * {
     box-sizing: border-box;
+}
+
+@media (max-width: 768px) {
+
+    .casino-layout {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .left-column,
+    .right-column {
+        padding: 15px;
+        align-items: center;
+        text-align: center;
+    }
+
+    .center-column {
+        border: none;
+    }
+
+    .card-img {
+        width: 55px;
+    }
+
+    .right-column input,
+    .right-column button {
+        width: 90%;
+        max-width: 300px;
+    }
 }
